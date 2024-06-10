@@ -32,7 +32,7 @@ wire add, sub;
 FADD U0 ( .a(a), .b(b), .cin(cin), .cout(add), .sum(z1));
 FSUB U1 (.a(a), .b(b), .bin(bin), .bout(sub), .diff(z2));
 
-
+//01= add ; 10 =subtract
 assign z = sel[0] ? z1 : z2;
 assign cout = sel [0] ? add : 1'bz;
 assign bout = sel [1] ? sub : 1'bz;
